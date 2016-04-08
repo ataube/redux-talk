@@ -1,0 +1,8 @@
+.flux .reveal .slides > section > section.present {
+    top: 0px !important;
+}
+
+.flux .reveal .slides > section > section.present h3 {
+    color: black;
+    font-family: Panton, sans-serif;
+}
