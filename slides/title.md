@@ -4,3 +4,4 @@
 ## The state container for JavaScript apps
 
 Andreas Taube, codecentric AG
+TODO twitter/github

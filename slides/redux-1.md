@@ -1,10 +1,7 @@
 <!-- .slide: data-background="img/background-orange-orig.jpg" -->
 
-### Redux
-1. Creator: *Dan Abramov*
-1. Public traction since [React Europe 2015](https://www.react-europe.org/2015/2015.html)
-1. Current Version: 3.3.1
-1. Heavily inspired by Flux / Elm
+# Redux
+## The Basics
 
 ---
 
