@@ -5,6 +5,35 @@
 
 ---
 
+### Three Principles
+1. One application state / One store
+1. State is readonly
+1. State mutations only with pure functions
+
+---
+
+### Actions
+- Like a command to modify state in the store
+- Must have a type and if needed payload data
+
+
+```javascript
+const INCREMENT = 'INCREMENT'
+
+function increment(value = 1) {
+  return {
+    type: INCREMENT,
+    payload: value
+  }
+}
+
+// triggers an action
+store.dispatch(increment(10))
+
+```
+
+---
+
 ### A table
 
 <table>
