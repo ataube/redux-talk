@@ -18,7 +18,7 @@
 
 
 ```javascript
-const INCREMENT_BY = 'INCREMENT_BY'
+const INCREMENT_BY = 'INCREMENT_BY';
 
 function incrementBy(value = 1) {
   return {
@@ -28,7 +28,7 @@ function incrementBy(value = 1) {
 }
 
 // triggers an action
-store.dispatch(increment(10))
+store.dispatch(increment(10));
 
 ```
 
@@ -52,7 +52,7 @@ store.dispatch(increment(10))
 
 ### Reducers - Example
 ```javascript
-import { INCREMENT_BY } from './actions'
+import { INCREMENT_BY } from './actions';
 
 const initialState = { counter: 0 };
 
@@ -73,16 +73,16 @@ function(state = initialState, action) {
 #### How to return a new state?
 
 ```javascript
-const previousState = { x: 'hello', y: 1 }
+const previousState = { x: 'hello', y: 1 };
 
 // 1) Object.assign
-newState = Object.assign({}, previousState, { y: 10 } )
+newState = Object.assign({}, previousState, { y: 10 } );
 
 // 2) Object spread operator (ES7)
-newState = { ...previousState, {y: 10 } }
+newState = { ...previousState, {y: 10 } };
 
 // 3) React Immutable helpers
-newState = update(previousState, { y: { $set : 10 } })
+newState = update(previousState, { y: { $set : 10 } });
 
 ```
 <br><br>
@@ -91,8 +91,32 @@ newState = update(previousState, { y: { $set : 10 } })
 ---
 
 ### Store
-
-
-
+- Builds the connection between *Reducers* and *Actions*
+  - Holds application state
+  - Allows access to state
+  - Allows state to be updated
+  - Registers listeners
+  - Handles unregistering of listeners
 
 ---
+
+### Store - Example
+
+```javascript
+import { incrementBy } from './actions';
+import { createStore } from 'redux';
+import counter = './reducers';
+
+const store = createStore(counter);
+
+let unsubscribe = store.subscribe(() =>
+  console.log(store.getState());
+)
+
+store.dispatch(incrementBy(10));
+
+unsubscribe();
+```
+---
+
+# DEMO
