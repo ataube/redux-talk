@@ -13,16 +13,16 @@
 ---
 
 ### Actions
-- Like a command to modify state in the store
-- Must have a type and if needed payload data
+- Like a command to modify store state
+- Must have a `type` and if needed `payload` data
 
 
 ```javascript
-const INCREMENT = 'INCREMENT'
+const INCREMENT_BY = 'INCREMENT_BY'
 
-function increment(value = 1) {
+function incrementBy(value = 1) {
   return {
-    type: INCREMENT,
+    type: INCREMENT_BY,
     payload: value
   }
 }
@@ -34,54 +34,65 @@ store.dispatch(increment(10))
 
 ---
 
-### A table
+### Reducers
+- Define how state should mutate based on actions occurred
 
-<table>
-    <thead>
-        <tr>
-            <th>Item</th>
-            <th>Amount</th>
-            <th>Price</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Computer</td>
-            <td>3</td>
-            <td>100 €</td>
-        </tr>
-        <tr>
-            <td>Book</td>
-            <td>&gt;20</td>
-            <td>4.31 €</td>
-        </tr>
-    </tr></tbody>
-</table>
+`(previousState, action) => newState`
 
 ---
 
-### Source code
+### Reducers - Purity
+- Reducers are pure functions
+- They should never:
+  - mutate arguments
+  - cause side effects (API calls, etc...)
+  - calling non-pure functions `Date.now()` or `Math.random()`
+
+---
+
+### Reducers - Example
+```javascript
+import { INCREMENT_BY } from './actions'
+
+const initialState = { counter: 0 };
+
+function(state = initialState, action) {
+  switch(action.type) {
+    case INCREMENT_BY:
+      return { counter: state.counter + action.payload }
+    default:
+      return state;
+  }
+}
 
 ```
- class LengthComparator implements Comparator<String> {
-   public int compare(String first, String second) {
-     return Integer.compare(first.length(), second.length());
-   }
- }
+---
+
+
+### Reducers
+#### How to return a new state?
+
+```javascript
+const previousState = { x: 'hello', y: 1 }
+
+// 1) Object.assign
+newState = Object.assign({}, previousState, { y: 10 } )
+
+// 2) Object spread operator (ES7)
+newState = { ...previousState, {y: 10 } }
+
+// 3) React Immutable helpers
+newState = update(previousState, { y: { $set : 10 } })
+
 ```
+<br><br>
+<small>Link: [React Immutable Helpers](https://facebook.github.io/react/docs/update.html)</small>
 
 ---
 
-### Intro
+### Store
 
-<!-- .slide: data-background="img/background-orange-orig.jpg" -->
 
-1. What is the problem?
-1. *What other solutions are there?*
 
 
 ---
-
-### Another slide
-
-Lorem ipsum
