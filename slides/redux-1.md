@@ -119,4 +119,4 @@ unsubscribe();
 ```
 ---
 
-# DEMO
+# [DEMO](http://localhost:8080/examples/counter)
