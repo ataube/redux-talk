@@ -5,7 +5,11 @@
 
 ---
 
-### Middleware
+## Middleware
+
+---
+
+### Middleware - Definition
 > "A third-party extension point between dispatching an action,
 > and the moment it reaches the reducer"
 >
@@ -48,11 +52,47 @@ export default function createLogger({ getState }) {
 
 ---
 
+# [DEMO](http://localhost:8080/examples/logger)
 
 ---
 
-### Topics
-1. Async Actions
-2. Middleware Concept
-3. normalizr
-4. ....
+## Async Actions
+
+---
+
+### Default Behavior
+- Synchronous data flow
+- Every time an action gets dispatched, the state updates immediately
+
+<br>
+=> use the middleware concept to enable async data flow
+
+---
+
+### Async Middleware's
+* [redux-thunk](https://github.com/gaearon/redux-thunk)
+* [redux-promise](https://github.com/acdlite/redux-promise)
+* [redux-rx](https://github.com/acdlite/redux-rx)
+* [redux-gen](https://github.com/weo-edu/redux-gen)
+* [redux-saga](https://github.com/yelouafi/redux-saga)
+
+---
+
+### Redux Thunk
+- Returns a function instead of an action
+- Dispatch of action's can be delayed or executed on certain conditions
+- Implementation:
+
+
+```javascript
+export default function thunkMiddleware({ dispatch, getState }) {
+  return next => action => {
+    if (typeof action === 'function') {
+      return action(dispatch, getState);
+    }
+    return next(action);
+  };
+}
+
+```
+---
