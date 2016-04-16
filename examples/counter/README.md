@@ -1,4 +1,5 @@
 # Redux-Counter
+A simple counter example to increate and decrease a counter
 
 ## Install
 1. `npm install`
