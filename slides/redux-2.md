@@ -22,6 +22,35 @@
 * etc...
 
 ---
+
+### Middleware - Signature
+`({ getState, dispatch }) => next => action`
+
+---
+
+### Middleware - Logging Example
+
+```javascript
+export default function createLogger({ getState }) {
+  return (next) => (action) => {
+    const prevState = getState();
+    const returnValue = next(action);
+    const nextState = getState();
+
+    console.log('prev state', prevState);
+    console.log('action', action);
+    console.log('next state', nextState);
+
+    return returnValue;
+  };
+}
+```
+
+---
+
+
+---
+
 ### Topics
 1. Async Actions
 2. Middleware Concept
