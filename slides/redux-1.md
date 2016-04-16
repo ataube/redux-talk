@@ -109,7 +109,7 @@ import counter = './reducers';
 
 const store = createStore(counter);
 
-let unsubscribe = store.subscribe(() =>
+const unsubscribe = store.subscribe(() =>
   console.log(store.getState());
 )
 
