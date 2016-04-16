@@ -5,6 +5,23 @@
 
 ---
 
+### Middleware
+> "A third-party extension point between dispatching an action,
+> and the moment it reaches the reducer"
+>
+
+[Redux docs](http://redux.js.org/docs/advanced/Middleware.html)
+---
+
+### Middleware - Use cases
+* logging
+* async actions
+* crash reporting
+* routing
+* site effects
+* etc...
+
+---
 ### Topics
 1. Async Actions
 2. Middleware Concept
