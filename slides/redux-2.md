@@ -32,7 +32,7 @@
 
 ---
 
-### Middleware - Logging Example
+### Middleware - Logger
 
 ```javascript
 export default function createLogger({ getState }) {
@@ -53,6 +53,7 @@ export default function createLogger({ getState }) {
 ---
 
 # [DEMO](http://localhost:8080/examples/logger)
+## Logger-Middleware
 
 ---
 
@@ -114,3 +115,7 @@ export const incrementAsync = function(value) {
 }
 
 ```
+---
+
+# [DEMO](http://localhost:8080/examples/async-actions)
+## Async Actions
