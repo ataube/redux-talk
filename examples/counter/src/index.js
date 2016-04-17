@@ -15,10 +15,9 @@ store.subscribe(() => {
   view.innerHTML = state.counter;
 });
 
-decrementButton.onclick = () => store.dispatch(decrement());
-
-incrementByButton.onclick = () => {
+decrementButton.addEventListener('click', () => store.dispatch(decrement()));
+incrementByButton.addEventListener('click', () => {
   store.dispatch(incrementBy(parseInt(input.value, 0)));
-};
+});
 
 store.dispatch(incrementBy());
