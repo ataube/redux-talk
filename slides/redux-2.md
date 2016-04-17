@@ -96,3 +96,21 @@ export default function thunkMiddleware({ dispatch, getState }) {
 
 ```
 ---
+
+### Async Action - Example
+
+```javascript
+export const INCREMENT_ASYNC_REQUEST = 'INCREMENT_ASYNC_REQUEST';
+export const INCREMENT_ASYNC_SUCCESS = 'INCREMENT_ASYNC_SUCCESS';
+
+export const incrementAsync = function(value) {
+  return function(dispatch) {
+    dispatch({type: INCREMENT_ASYNC_REQUEST});
+
+    setTimeout(() =>
+      dispatch({type: INCREMENT_ASYNC_SUCCESS, payload: value}), 3000
+    );
+  }
+}
+
+```
