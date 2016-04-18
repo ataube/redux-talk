@@ -26,8 +26,21 @@
 
 ---
 
+## Redux Dev Tools - Setup
+
+```javascript
+import { createStore, applyMiddleware, compose } from 'redux';
+
+const store = createStore(counter, { counter: 0 }, compose(
+  applyMiddleware(thunk, logger),
+  window.devToolsExtension ? window.devToolsExtension() : f => f
+));
+
+```
+---
+
 # [DEMO](http://127.0.0.1:8080/examples/dev-tooling)
-## Redux Dev Tools Chrome Extension
+## Redux Dev Tools - Chrome Extension
 
 ---
 
