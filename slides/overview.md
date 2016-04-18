@@ -3,7 +3,7 @@
 ### Overview
 - Background
 - Basics (Actions / Reducers / Store)
-- Advanced Topics (DataFlow / Async / Middlewares)
+- Advanced Topics (Middlewares / DataFlow / Async)
 - Dev-Tooling
 - Extensions
 - Summary
