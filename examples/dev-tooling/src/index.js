@@ -1,7 +1,6 @@
 import { createStore, applyMiddleware, compose } from 'redux';
 import createLogger from 'redux-logger';
 import thunk from 'redux-thunk';
-import { persistStore, autoRehydrate } from 'redux-persist';
 
 import counter from './reducers';
 import syncView from './syncView';
