@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import { createStore, applyMiddleware } from 'redux';
 import createLogger from 'redux-logger';
 import thunk from 'redux-thunk';

@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import { createStore } from 'redux';
 import { incrementBy, decrement } from './actions';
 import counter from './reducers';
