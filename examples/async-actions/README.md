@@ -1,4 +1,4 @@
-# Logger
+# Async Actions Example
 Demonstrates async actions with redux-thunk middleware.
 
 ## Install

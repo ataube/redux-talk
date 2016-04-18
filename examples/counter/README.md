@@ -1,4 +1,4 @@
-# Redux-Counter
+# Counter Example
 A simple counter example to increate and decrease a counter
 
 ## Install
