@@ -1,9 +1,9 @@
-<!-- .slide:  -->
+<!-- .slide: data-background="img/background-title-16x9.png" -->
 
 ### Overview
-- Background
-- Basics (Actions / Reducers / Store)
-- Advanced Topics (DataFlow / Async / Middlewares)
+- Intro
+- Basics
+- Advanced Topics
+- Bindings
 - Dev-Tooling
-- Extensions
 - Summary

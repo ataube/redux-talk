@@ -1,8 +1,10 @@
 .flux .reveal .slides > section > section.present {
-    top: 0px !important;
+    top: 20px !important;
+    left: -100px;
+    text-align: left;
 }
 
-.flux .reveal .slides > section > section.present h3 {
+.flux .reveal .slides > section > section.present h2 {
     color: black;
     font-family: Panton, sans-serif;
 }
