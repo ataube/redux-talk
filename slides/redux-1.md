@@ -5,16 +5,25 @@
 
 ---
 
-### Three Principles
-1. One application state / One store
-1. State is readonly
-1. State mutations only with pure functions
+### Main Ideas
+* Single Source of Truth
+* Unidirectional Data Flow
+* Read Only State
+* Immutability
+* State mutations only with pure functions
+
+---
+
+### Redux Data Flow
+
+<!-- .slide: data-state="flux" data-background-size="65%" data-background="img/redux-flow.png" -->
 
 ---
 
 ### Actions
-- Like a command to modify store state
-- Must have a `type` and if needed `payload` data
+- Defines an operation to mutate state
+- Must have a `type` property
+- Can have `payload` data
 
 
 ```javascript
@@ -87,6 +96,12 @@ newState = update(previousState, { y: { $set : 10 } });
 ```
 <br><br>
 <small>Link: [React Immutable Helpers](https://facebook.github.io/react/docs/update.html)</small>
+
+---
+
+### Reducer composition
+
+//TODO
 
 ---
 
