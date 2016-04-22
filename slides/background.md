@@ -1,29 +1,24 @@
 <!-- .slide: data-background="img/background-orange-orig.jpg" -->
 
-# Background
+# Intro
+---
+
+<!-- .slide: data-state="flux" data-background-size="100%" data-background="img/redux-github.png" -->
+
 ---
 
 ### Redux
 1. Creator: *[Dan Abramov](https://github.com/gaearon)*
 1. Public traction since [React Europe 2015](https://www.react-europe.org/2015/2015.html)
-1. Current Version: 3.3.1
-1. Heavily inspired by Flux / Elm
+1. Current Version: 3.5.1
 
 ---
 
-### Flux
--  Application architecture for client-side web applications
--  Utilizing a unidirectional data flow
--  It complements React's composable view components
+![Twitter](img/dan_abranov_twitter.png)
+
+[Link](https://twitter.com/dan_abramov/status/604356871722569728)
 
 ---
-
-
-## Flux Architecture
-<!-- .slide: data-state="flux" data-background-size="100%" data-background="img/flux-diagram-white-background.png" -->
-
----
-
 
 ### Flux Libraries
 <small>The popular ones...</small>
@@ -46,6 +41,12 @@
  </div>
 
 ---
+
+## Flux Architecture
+<!-- .slide: data-state="flux" data-background-size="100%" data-background="img/flux-diagram-white-background.png" -->
+
+---
+
 
 ### Motivation
 1. Code must manage more state than ever before
