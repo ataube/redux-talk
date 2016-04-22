@@ -53,3 +53,8 @@ const actions = { incrementBy, asyncIncrement, decrement };
 
 export default connect(selector, actions)(Counter);
 ```
+
+---
+
+# [DEMO](http://localhost:8080/examples/react-counter)
+## React Counter
