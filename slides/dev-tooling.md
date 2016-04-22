@@ -14,7 +14,7 @@
 
 ## Redux Dev Tools
 * A redux extension for live editing and time travel [(link)](https://github.com/gaearon/redux-devtools)
-* Native React components (Debug-Views)
+* Collection of React components (Debug-Views)
   * LogMonitor [(link)](https://github.com/gaearon/redux-devtools-log-monitor)
   * SliderMonitor [(link)](https://github.com/calesce/redux-slider-monitor)
   * etc...
@@ -26,7 +26,8 @@
 
 ---
 
-## Redux Dev Tools - Setup
+## Redux Dev Tools
+#### Chrome Extension Setup
 
 ```javascript
 import { createStore, applyMiddleware, compose } from 'redux';
