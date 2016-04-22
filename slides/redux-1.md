@@ -21,7 +21,7 @@
 ---
 
 ### Actions
-- Defines an operation to mutate state
+- Defines an intent to mutate state
 - Must have a `type` property
 - Can have `payload` data
 
@@ -44,7 +44,7 @@ store.dispatch(increment(10));
 ---
 
 ### Reducers
-- Define how state should mutate based on actions occurred
+- Defines the mutation logic of state based on actions
 
 `(previousState, action) => newState`
 
@@ -65,7 +65,7 @@ import { INCREMENT_BY } from './actions';
 
 const initialState = { counter: 0 };
 
-function(state = initialState, action) {
+function counter(state = initialState, action) {
   switch(action.type) {
     case INCREMENT_BY:
       return { counter: state.counter + action.payload }
@@ -77,7 +77,6 @@ function(state = initialState, action) {
 ```
 ---
 
-
 ### Reducers
 #### How to return a new state?
 
@@ -88,7 +87,7 @@ const previousState = { x: 'hello', y: 1 };
 newState = Object.assign({}, previousState, { y: 10 } );
 
 // 2) Object spread operator (ES7)
-newState = { ...previousState, {y: 10 } };
+newState = { ...previousState, { y: 10 } };
 
 // 3) React Immutable helpers
 newState = update(previousState, { y: { $set : 10 } });
@@ -100,9 +99,21 @@ newState = update(previousState, { y: { $set : 10 } });
 ---
 
 ### Reducer composition
+- The state tree can be a composition of multiple reducers
+- Each reducer operates only on a specific tree part
 
-//TODO
+```javascript
+import { combineReducers } from 'redux';
 
+const userSession = function sessionReducer() {}
+const articles = function articlesReducer() {}
+
+const rootReducer = combineReducers(
+  session: userSession,
+  articles
+);
+
+```
 ---
 
 ### Store
