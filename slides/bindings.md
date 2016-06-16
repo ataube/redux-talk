@@ -10,7 +10,6 @@
 * [ng2-redux](https://github.com/wbuchwalter/ng2-redux)
 * [backbone-redux](https://github.com/redbooth/backbone-redux)
 * [redux-falcor](https://github.com/ekosz/redux-falcor)
-* [deku-redux](https://github.com/troch/deku-redux)
 
 ---
 
