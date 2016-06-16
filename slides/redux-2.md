@@ -73,7 +73,7 @@ export default function createLogger({ getState }) {
 ### Async Middleware's
 * [redux-thunk](https://github.com/gaearon/redux-thunk)
 * [redux-promise](https://github.com/acdlite/redux-promise)
-* [redux-rx](https://github.com/acdlite/redux-rx)
+* [redux-observable](https://github.com/redux-observable/redux-observable)
 * [redux-gen](https://github.com/weo-edu/redux-gen)
 * [redux-saga](https://github.com/yelouafi/redux-saga)
 
@@ -82,20 +82,7 @@ export default function createLogger({ getState }) {
 ### Redux Thunk
 - Returns a function instead of an action
 - Dispatch of action's can be delayed or executed on certain conditions
-- Implementation:
 
-
-```javascript
-export default function thunkMiddleware({ dispatch, getState }) {
-  return next => action => {
-    if (typeof action === 'function') {
-      return action(dispatch, getState);
-    }
-    return next(action);
-  };
-}
-
-```
 ---
 
 ### Async Action - Example
@@ -116,6 +103,22 @@ export const incrementAsync = function(value) {
 
 ```
 ---
+
+### Redux Thunk - Implementation
+
+```javascript
+export default function thunkMiddleware({ dispatch, getState }) {
+  return next => action => {
+    if (typeof action === 'function') {
+      return action(dispatch, getState);
+    }
+    return next(action);
+  };
+}
+
+```
+---
+
 
 # [DEMO](http://localhost:8080/examples/async-actions)
 ## Async Actions
