@@ -1,7 +1,7 @@
 <!-- .slide: data-background="img/background-title-16x9.png" -->
 
 # Redux
-### The state container for JavaScript apps
+### Redux, der Zustandscontainer für Single Page Apps
 
 
 Andreas Taube, codecentric AG
