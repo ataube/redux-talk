@@ -12,11 +12,16 @@
 * Immutability
 * State mutations only with pure functions
 
+
 ---
 
 ### Redux Data Flow
 
 <!-- .slide: data-state="flux" data-background-size="65%" data-background="img/redux-flow.png" -->
+
+---
+
+# [DEMO](http://localhost:8080/examples/counter)
 
 ---
 
@@ -89,12 +94,12 @@ newState = Object.assign({}, previousState, { y: 10 } );
 // 2) Object spread operator (ES7)
 newState = { ...previousState, { y: 10 } };
 
-// 3) React Immutable helpers
+// 3) React Immutability Helpers
 newState = update(previousState, { y: { $set : 10 } });
 
 ```
 <br><br>
-<small>Link: [React Immutable Helpers](https://facebook.github.io/react/docs/update.html)</small>
+<small>Link: [React Immutability Helpers](https://facebook.github.io/react/docs/update.html)</small>
 
 ---
 
@@ -110,7 +115,7 @@ const articles = function articlesReducer() {}
 
 const rootReducer = combineReducers(
   session: userSession,
-  articles
+  articles: articles
 );
 
 ```
@@ -143,6 +148,3 @@ store.dispatch(incrementBy(10));
 
 unsubscribe();
 ```
----
-
-# [DEMO](http://localhost:8080/examples/counter)
