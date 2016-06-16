@@ -43,11 +43,12 @@ const store = createStore(counter, { counter: 0 }, compose(
 # [DEMO](http://127.0.0.1:8080/examples/dev-tooling)
 ## Redux Dev Tools - Chrome Extension
 
----
 
+<!--
 ## Hot reloading
 * Idea: _Inject file changes in your running app while keeping the application state in place._
 * Suited for Webpack and React
 * Further reading:
   * Webpack Hot Module replacement [(link)](https://webpack.github.io/docs/hot-module-replacement-with-webpack.html)
   * React Hot Loader [(link)](https://github.com/gaearon/react-hot-loader)
+-->
