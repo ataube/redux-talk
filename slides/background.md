@@ -8,15 +8,15 @@
 ---
 
 ### Redux
-1. Creator: *[Dan Abramov](https://github.com/gaearon)*
+1. Creator: Dan Abramov [@gaearon](https://github.com/gaearon)
 1. Public traction since [React Europe 2015](https://www.react-europe.org/2015/2015.html)
-1. Current Version: 3.5.1
+1. Current Version: 3.5.X
 
 ---
 
 ![Twitter](img/dan_abranov_twitter.png)
 
-[Link](https://twitter.com/dan_abramov/status/604356871722569728)
+<small>[https://twitter.com/dan_abramov/status/604356871722569728](https://twitter.com/dan_abramov/status/604356871722569728)</small>
 
 ---
 
